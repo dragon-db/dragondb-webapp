@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragon Landing Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #101010;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            position: relative;
+        }
+
+        .background-image {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60%;
+            height: auto;
+            z-index: 1;
+            opacity: 1;
+        }
+
+        .logo {
+            width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+            z-index: 2;
+        }
+
+        .gradient-text {
+            font-size: 5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-family: "Outfit", serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            background: linear-gradient(90deg, #6a00fd, #fe00fc);
+            background-size: 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient-animation 5s infinite linear;
+            text-align: center;
+            z-index: 2;
+            position: relative;
+        }
+
+        @keyframes gradient-animation {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .logo {
+                width: 100px;
+            }
+
+            .gradient-text {
+                font-size: 3rem;
+            }
+
+            .background-image {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <img src="https://blog.infinitysystems.in/dragondbserver/DragonDB_ServerBG.png" alt="Background"
+        class="background-image">
+    <!-- <img src="https://blog.infinitysystems.in/dragondbserver/DragonDB_Trans.png" alt="Logo" class="logo"> -->
+    <div class="gradient-text">Dragon DB</div>
+</body>
+
+</html>
